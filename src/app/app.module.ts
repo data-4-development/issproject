@@ -13,6 +13,8 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { BarchartComponent } from './charts/barchart/barchart.component';
+import { LinechartComponent } from './charts/linechart/linechart.component';
+import { PiechartComponent } from './charts/piechart/piechart.component';
 
 
 
@@ -25,7 +27,9 @@ import { BarchartComponent } from './charts/barchart/barchart.component';
     DashboardComponent,
     LoginComponent,
     RegisterComponent,
-    BarchartComponent
+    BarchartComponent,
+    LinechartComponent,
+    PiechartComponent
   ],
   imports: [
     BrowserModule,
