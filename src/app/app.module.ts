@@ -9,8 +9,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { HomeComponent } from './home/home.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { BarchartComponent } from './charts/barchart/barchart.component';
 import { LinechartComponent } from './charts/linechart/linechart.component';
@@ -35,20 +35,24 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ChartstableComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
+
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
+
     RouterModule,
-    
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
