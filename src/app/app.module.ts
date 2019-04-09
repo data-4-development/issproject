@@ -15,7 +15,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { BarchartComponent } from './charts/barchart/barchart.component';
 import { LinechartComponent } from './charts/linechart/linechart.component';
 import { PiechartComponent } from './charts/piechart/piechart.component';
-
+import { ChartstableComponent } from './charts/chartstable/chartstable.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -29,12 +31,15 @@ import { PiechartComponent } from './charts/piechart/piechart.component';
     RegisterComponent,
     BarchartComponent,
     LinechartComponent,
-    PiechartComponent
+    PiechartComponent,
+    ChartstableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule,
     
     BrowserAnimationsModule,
