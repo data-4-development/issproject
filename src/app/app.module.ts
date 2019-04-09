@@ -38,6 +38,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NgbModule,
     BrowserModule,
     AppRoutingModule,
+
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
+
     RouterModule,
     BrowserAnimationsModule,
     LayoutModule,
