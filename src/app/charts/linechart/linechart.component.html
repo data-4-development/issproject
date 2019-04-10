@@ -1,10 +1,16 @@
-<div style="text-align:center" > 
-  <canvas id="lineChart" ></canvas>
- 
-  <button (click)="adddata()">Click me!</button>
+<div style="text-align:center">
+  <canvas id="lineChart"></canvas>
 
 
-</div> 
+  <h4>native html select</h4>
+  <mat-form-field>
+    <mat-label>Select dataset </mat-label>
+    <select matNativeControl id="mySelectId">
+      <option value="" disabled selected></option>
+      <option value="bar" #name="ngModel" name="dtype" [(ngModel)]="dstype" type="text">bar</option>
+      <option value="line" #name="ngModel" name="dtype" [(ngModel)]="dstype">line</option>
 
+    </select>
+  </mat-form-field>
+  <button (ngSubmit)="adddata()">Click me!</button>
 </div>
-

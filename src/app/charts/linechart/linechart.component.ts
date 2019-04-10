@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
-
+import {MatSnackBar} from '@angular/material';
 @Component({
   selector: 'app-linechart',
   templateUrl: './linechart.component.html',
@@ -71,11 +71,11 @@ export class LinechartComponent implements OnInit {
 
 
   }
+ public dtype: string="line";
 
-
-  adddata() {
+  adddata(dtype: string) {
     this.LineChart.data.datasets.push({
-      type: 'bar',
+      type:dtype,
       label: 'v rate in tunisia ',
       data: [0, 7, 13, 5, 2, 10, 5, 6, 9, 13, 1, 9],
       fill: false,

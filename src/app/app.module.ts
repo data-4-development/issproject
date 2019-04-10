@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatSelectModule,  MatInputModule, MatFormFieldModule , MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,8 +17,7 @@ import { LinechartComponent } from './charts/linechart/linechart.component';
 import { PiechartComponent } from './charts/piechart/piechart.component';
 import { ChartstableComponent } from './charts/chartstable/chartstable.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,21 +37,25 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NgbModule,
     BrowserModule,
     AppRoutingModule,
-
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
-
     RouterModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
+    MatSelectModule,
     MatButtonModule,
     MatSidenavModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatIconModule,
     MatListModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
