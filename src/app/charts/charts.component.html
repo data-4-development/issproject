@@ -1,7 +1,15 @@
 <div style="text-align:center" >
 
-    <app-linechart></app-linechart>
-    <app-barchart></app-barchart>
-    <app-piechart></app-piechart>
+<mat-grid-list cols="1" rowHeight="1:2">
+  <app-linechart></app-linechart>
+</mat-grid-list>
+
+<mat-grid-list cols="2" rowHeight="2:2">
+  <mat-grid-tile><app-barchart></app-barchart></mat-grid-tile>
+  <mat-grid-tile><app-piechart></app-piechart></mat-grid-tile>
+</mat-grid-list>
+    
+<mat-grid-list cols="1" rowHeight="1:2">
     <app-chartstable></app-chartstable>
+</mat-grid-list>
 </div>
