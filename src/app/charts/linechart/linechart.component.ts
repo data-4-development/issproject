@@ -22,15 +22,13 @@ export class LinechartComponent implements OnInit {
           data: [9, 7, 3, 5, 2, 10, 15, 16, 19, 3, 1, 9],
           fill: false,
           lineTension: 0.2,
-          backgroundColor: [
-            'rgba(255, 99,100, 0.2)'
-          ],
-          borderColor: "red",
+          backgroundColor:"pink",
+          borderColor: "pink",
           borderWidth: 3
         },
         {
           type: 'line',
-          label: 'Unemployment rate in tunisia ',
+          label: 'Unemployment rate in tunisia 2 ',
           data: [2, 17, 13, 5, 12, 10, 12, 13, 15, 10, 8, 11],
           fill: false,
           lineTension: 0.2,
@@ -79,8 +77,8 @@ export class LinechartComponent implements OnInit {
       label: 'v rate in tunisia ',
       data: [0, 7, 13, 5, 2, 10, 5, 6, 9, 13, 1, 9],
       fill: false,
-      backgroundColor: "red",
-      borderColor: "red",
+      backgroundColor: "#87CEFA",
+      borderColor: "	#87CEFA",
       borderWidth: 3,
     });
 
