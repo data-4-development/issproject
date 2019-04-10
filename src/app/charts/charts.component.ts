@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-charts',
+import {MatGridListModule} from '@angular/material/grid-list';
+ @Component({
+selector: 'app-charts',
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.css']
 })
+//export class  {}
 export class ChartsComponent implements OnInit {
 
   constructor() { }
@@ -13,3 +14,4 @@ export class ChartsComponent implements OnInit {
   }
 
 }
+
