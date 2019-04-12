@@ -5,11 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-<<<<<<< HEAD
-import { MatToolbarModule, MatSelectModule,  MatInputModule, MatFormFieldModule , MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
-=======
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule } from '@angular/material';
->>>>>>> 5708c38fe73c744f136c818e1b9920d9b8b8e60d
+import { MatToolbarModule, MatGridListModule, MatSelectModule,  MatInputModule, MatFormFieldModule , MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -59,15 +55,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatGridListModule,
     ReactiveFormsModule,
-<<<<<<< HEAD
     FormsModule,
-    
-    
-=======
-    
-     
-    FormsModule
->>>>>>> 5708c38fe73c744f136c818e1b9920d9b8b8e60d
   ],
   providers: [],
   bootstrap: [AppComponent]

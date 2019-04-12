@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
-import {MatSnackBar} from '@angular/material';
+import { MatSnackBar } from '@angular/material';
+import { NgForm } from '@angular/forms';
+
+
 @Component({
   selector: 'app-linechart',
   templateUrl: './linechart.component.html',
@@ -22,7 +25,7 @@ export class LinechartComponent implements OnInit {
           data: [9, 7, 3, 5, 2, 10, 15, 16, 19, 3, 1, 9],
           fill: false,
           lineTension: 0.2,
-          backgroundColor:"pink",
+          backgroundColor: "pink",
           borderColor: "pink",
           borderWidth: 3
         },
@@ -69,20 +72,47 @@ export class LinechartComponent implements OnInit {
 
 
   }
- public dtype: string="line";
 
-  adddata(dtype: string) {
+
+
+  //  dataset:dtype[];
+  //datasets=[
+  // new Dataset("haja",[12,2, 13, 15, 2, 10, 12, 14, 16, 10, 14, 11]),
+  // new Dataset("inflation",[2, 17, 13, 5, 3, 9, 7, 15, 15, 10, 8, 1])
+  //]
+  datasets: Datas[]= [{ id:0, name: "haja", data: [2, 17, 13, 5, 3, 9, 7, 15, 15, 10, 8, 1] },
+  { id:1, name: "hajtin", data: [12, 5, 7, 15, 13, 19, 9, 5, 4, 7, 14, 1] }
+];
+
+  adddata(x, y) {
+      console.log(y);
     this.LineChart.data.datasets.push({
-      type:dtype,
+      type: x,
       label: 'v rate in tunisia ',
-      data: [0, 7, 13, 5, 2, 10, 5, 6, 9, 13, 1, 9],
+      data: this.datasets[y].data,
       fill: false,
-      backgroundColor: "#87CEFA",
-      borderColor: "	#87CEFA",
+      lineTension: 0.2,
+      backgroundColor: "red",
+      borderColor: "red",
       borderWidth: 3,
     });
 
     this.LineChart.update();
 
   }
+
+
+
+  removedata() {
+    this.LineChart.datasets.removedata()
+    //this.LineChart.data.datasets.pop();
+
+    this.LineChart.update();
+
+  }
+}
+export interface Datas {
+  id:number;
+  name: string;
+  data: number[];
 }
