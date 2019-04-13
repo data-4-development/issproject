@@ -36,6 +36,18 @@ const COUNTRIES: Country[] = [
     flag: 'f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
     area: 9596960,
     population: 200585
+  },
+  {
+    name: 'Gabes',
+    flag: '',
+    area: 17075200,
+    population: 1250368
+  },
+  {
+    name: 'tatouine',
+    flag: '',
+    area: 17075200,
+    population: 1250368
   }
 ];
 

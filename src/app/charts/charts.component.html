@@ -1,15 +1,24 @@
-<div style="text-align:center" >
+<div style="text-align:center">
 
-<mat-grid-list cols="1" rowHeight="1:2">
   <app-linechart></app-linechart>
-</mat-grid-list>
-
-<mat-grid-list cols="2" rowHeight="2:2">
-  <mat-grid-tile><app-barchart></app-barchart></mat-grid-tile>
-  <mat-grid-tile><app-piechart></app-piechart></mat-grid-tile>
-</mat-grid-list>
+  <p>
     
-<mat-grid-list cols="1" rowHeight="1:2">
-    <app-chartstable></app-chartstable>
-</mat-grid-list>
+  </p>
+  <div style="width: 100%; height: 100%;">
+    <section>
+      <app-chartstable></app-chartstable>
+    </section>
+  </div>
+
+
+  <mat-grid-list cols="2" rowHeight="2:2">
+    <mat-grid-tile>
+      <app-barchart></app-barchart>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-piechart></app-piechart>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
 </div>

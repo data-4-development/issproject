@@ -1,3 +1,10 @@
 mat-grid-tile {
   background: lightblue;
 }
+section
+{
+    padding:5px;
+    align-self: auto;
+    border:gray 3px dashed; 
+    margin-top:5px;
+}

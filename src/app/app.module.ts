@@ -18,6 +18,7 @@ import { PiechartComponent } from './charts/piechart/piechart.component';
 import { ChartstableComponent } from './charts/chartstable/chartstable.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarouselComponent } from './home/carousel/carousel.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BarchartComponent,
     LinechartComponent,
     PiechartComponent,
-    ChartstableComponent
+    ChartstableComponent,
+    CarouselComponent
   ],
   imports: [
     NgbModule,

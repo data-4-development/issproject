@@ -80,20 +80,21 @@ export class LinechartComponent implements OnInit {
   // new Dataset("haja",[12,2, 13, 15, 2, 10, 12, 14, 16, 10, 14, 11]),
   // new Dataset("inflation",[2, 17, 13, 5, 3, 9, 7, 15, 15, 10, 8, 1])
   //]
-  datasets: Datas[]= [{ id:0, name: "haja", data: [2, 17, 13, 5, 3, 9, 7, 15, 15, 10, 8, 1] },
-  { id:1, name: "hajtin", data: [12, 5, 7, 15, 13, 19, 9, 5, 4, 7, 14, 1] }
-];
+  datasets: Datas[] = [{ id: 0, name: "haja", data: [2, 17, 13, 5, 3, 9, 7, 15, 15, 10, 8, 1] },
+  { id: 1, name: "hajtin", data: [12, 5, 7, 15, 13, 19, 9, 5, 4, 7, 14, 1] },
+  { id: 2, name: "haj 3", data: [15, 11, 8, 9, 13, 15, 11, 9, 7, 5, 8, 11]}
+  ];
 
+  color:string[]=["#FF0000","#4169E1","#FFD700","#9932CC","#00FF00","#40E0D0"];
   adddata(x, y) {
-      console.log(y);
     this.LineChart.data.datasets.push({
       type: x,
       label: 'v rate in tunisia ',
       data: this.datasets[y].data,
       fill: false,
       lineTension: 0.2,
-      backgroundColor: "red",
-      borderColor: "red",
+      backgroundColor: this.color[y],
+      borderColor: this.color[y],
       borderWidth: 3,
     });
 
@@ -104,15 +105,15 @@ export class LinechartComponent implements OnInit {
 
 
   removedata() {
-    this.LineChart.datasets.removedata()
-    //this.LineChart.data.datasets.pop();
+    this.LineChart.data.datasets.pop();
 
     this.LineChart.update();
 
   }
+
 }
 export interface Datas {
-  id:number;
+  id: number;
   name: string;
   data: number[];
 }
