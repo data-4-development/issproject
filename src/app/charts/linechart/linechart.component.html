@@ -1,7 +1,7 @@
 <div style="text-align:center">
-<div style="width:80%; height: 80%;">
-  <canvas id="lineChart"></canvas>
-</div>
+  <div class="container">
+      <canvas id="lineChart"></canvas>
+    </div>
   <div style="text-align:center">
     <h4>Add new dataset to the chart</h4>
     <mat-form-field>
@@ -20,7 +20,7 @@
         </option>
       </select>
     </mat-form-field>
-    <p>  </p>
+    <p> </p>
 
     <button mat-raised-button color="primary" (click)="adddata(type.value, data.value)">Add dataset</button>
     <button type="button" class="btn btn-info" (click)="removedata()">Remove</button>
