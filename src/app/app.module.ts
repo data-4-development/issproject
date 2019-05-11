@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatGridListModule, MatSelectModule,  MatInputModule, MatFormFieldModule , MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
+import { MatToolbarModule,MatCardModule, MatGridListModule, MatSelectModule,  MatInputModule, MatFormFieldModule , MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -19,6 +19,10 @@ import { ChartstableComponent } from './charts/chartstable/chartstable.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselComponent } from './home/carousel/carousel.component';
+import { MapsComponent } from './maps/maps.component';
+import { ElectionsComponent } from './maps/elections/elections.component';
+import { ElecComponent } from './maps/elec/elec.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -34,10 +38,15 @@ import { CarouselComponent } from './home/carousel/carousel.component';
     LinechartComponent,
     PiechartComponent,
     ChartstableComponent,
-    CarouselComponent
+    CarouselComponent,
+    MapsComponent,
+    ElectionsComponent,
+    ElecComponent,
+    FooterComponent
   ],
   imports: [
     NgbModule,
+    MatCardModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
