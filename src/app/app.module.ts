@@ -27,6 +27,8 @@ import { ElecbacComponent } from './maps/elecbac/elecbac.component';
 import { ElecmunicComponent } from './maps/elecmunic/elecmunic.component';
 import { LegislComponent } from './maps/legisl/legisl.component';
 
+import {ValidateService} from './services/validate.service';
+import {FlashMessagesModule} from 'angular2-flash-messages';
 
 @NgModule({
   declarations: [
@@ -73,8 +75,9 @@ import { LegislComponent } from './maps/legisl/legisl.component';
     MatGridListModule,
     ReactiveFormsModule,
     FormsModule,
+    FlashMessagesModule.forRoot()
   ],
-  providers: [],
+  providers: [ValidateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
