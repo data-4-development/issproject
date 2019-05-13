@@ -23,6 +23,9 @@ import { MapsComponent } from './maps/maps.component';
 import { ElectionsComponent } from './maps/elections/elections.component';
 import { ElecComponent } from './maps/elec/elec.component';
 import { FooterComponent } from './footer/footer.component';
+import { ElecbacComponent } from './maps/elecbac/elecbac.component';
+import { ElecmunicComponent } from './maps/elecmunic/elecmunic.component';
+import { LegislComponent } from './maps/legisl/legisl.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { FooterComponent } from './footer/footer.component';
     MapsComponent,
     ElectionsComponent,
     ElecComponent,
-    FooterComponent
+    FooterComponent,
+    ElecbacComponent,
+    ElecmunicComponent,
+    LegislComponent
   ],
   imports: [
     NgbModule,
