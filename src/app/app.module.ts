@@ -29,6 +29,9 @@ import { LegislComponent } from './maps/legisl/legisl.component';
 
 import {ValidateService} from './services/validate.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
+import {AuthService} from './services/auth.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -75,9 +78,10 @@ import {FlashMessagesModule} from 'angular2-flash-messages';
     MatGridListModule,
     ReactiveFormsModule,
     FormsModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [ValidateService],
+  providers: [ValidateService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
