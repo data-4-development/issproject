@@ -3,7 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 3rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
@@ -14,8 +14,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 2rem;
-
+  margin-bottom: 4rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -23,12 +22,23 @@ body {
   z-index: 10;
 }
 
+/*full width container*/
+@media (max-width: 767px) {
+  .block {
+      margin-left:500px;
+      margin-right: 500px;
+  }
+}
+
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
+  width: 100%; /*slider width*/
+  max-height: 600px;
 }
 .carousel-item > img {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   min-width: 100%;
@@ -38,20 +48,6 @@ body {
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
-
 
 /* Featurettes
 ------------------------- */
@@ -87,5 +83,19 @@ body {
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
+  }
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
 }
