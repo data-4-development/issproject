@@ -32,6 +32,9 @@ import { PostService } from './dashboard/post.service';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
 
+import {ValidateService} from './services/validate.service';
+import {FlashMessagesModule} from 'angular2-flash-messages';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,10 +84,12 @@ import { AboutComponent } from './about/about.component';
     MatGridListModule,
     ReactiveFormsModule,
     FormsModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [
-    PostService
+    PostService,
+    ValidateService
   ],
-  bootstrap: [AppComponent]
+bootstrap: [AppComponent]
 })
 export class AppModule { }
