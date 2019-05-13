@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule,MatCardModule, MatGridListModule, MatSelectModule,  MatInputModule, MatFormFieldModule , MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatGridListModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -26,7 +26,11 @@ import { FooterComponent } from './footer/footer.component';
 import { ElecbacComponent } from './maps/elecbac/elecbac.component';
 import { ElecmunicComponent } from './maps/elecmunic/elecmunic.component';
 import { LegislComponent } from './maps/legisl/legisl.component';
-
+import { from } from 'rxjs';
+import { AddpostComponent } from './dashboard/addpost/addpost.component';
+import { PostService } from './dashboard/post.service';
+import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { LegislComponent } from './maps/legisl/legisl.component';
     FooterComponent,
     ElecbacComponent,
     ElecmunicComponent,
-    LegislComponent
+    LegislComponent,
+    AddpostComponent,
+    SidebarComponent,
+    AboutComponent,
+
   ],
   imports: [
     NgbModule,
@@ -74,7 +82,9 @@ import { LegislComponent } from './maps/legisl/legisl.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
