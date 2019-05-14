@@ -31,9 +31,12 @@ import { AddpostComponent } from './dashboard/addpost/addpost.component';
 import { PostService } from './dashboard/post.service';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
-import {ValidateService} from './services/validate.service';
-import {FlashMessagesModule} from 'angular2-flash-messages';
-import{ QuillModule } from 'ngx-quill';
+import { ValidateService } from './services/validate.service';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { QuillModule } from 'ngx-quill';
+import { AuthService } from './services/auth.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -85,12 +88,15 @@ import{ QuillModule } from 'ngx-quill';
     ReactiveFormsModule,
     FormsModule,
     FlashMessagesModule.forRoot(),
-    QuillModule
+    QuillModule,
+    HttpClientModule
   ],
   providers: [
     PostService,
-    ValidateService
+    ValidateService,
+    AuthService
   ],
-bootstrap: [AppComponent]
+  bootstrap: [AppComponent]
+    
 })
 export class AppModule { }
