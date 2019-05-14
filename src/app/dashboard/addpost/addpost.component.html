@@ -1,22 +1,30 @@
 <app-sidebar></app-sidebar>
+
 <div class="card">
   <div class="card-body">
-    <form>
+    <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label class="col-md-4">Person Name</label>
+        <label class="col-md-4">Post Title </label>
         <input type="text" class="form-control" />
       </div>
       <div class="form-group">
-        <label class="col-md-4">Business Name </label>
-        <input type="text" class="form-control" />
+        <label for="editor">Editors </label>
+        <quill-editor #disciplineQE id="discipline-qe" formControlName="editor"></quill-editor>
       </div>
+
+
       <div class="form-group">
-        <label class="col-md-4">Business GST Number </label>
-        <input type="text" class="form-control" />
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Add Business</button>
+        <button type="submit" class="btn btn-primary">Add Post</button>
       </div>
     </form>
   </div>
+</div>
+<!--
+  to read from quill as html page
+-->
+<div class="container">
+output:
+{{editorContent}}
+<p [innerHTML]="editorContent"></p>
+
 </div>

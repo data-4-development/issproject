@@ -31,9 +31,9 @@ import { AddpostComponent } from './dashboard/addpost/addpost.component';
 import { PostService } from './dashboard/post.service';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
-
 import {ValidateService} from './services/validate.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
+import{ QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -84,7 +84,8 @@ import {FlashMessagesModule} from 'angular2-flash-messages';
     MatGridListModule,
     ReactiveFormsModule,
     FormsModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    QuillModule
   ],
   providers: [
     PostService,
