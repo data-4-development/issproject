@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, } from '@angular/common/http';
 import {HttpClientModule} from '@angular/common/http' ;
 import {HttpHeaders} from '@angular/common/http';
-import 'rxjs/add/operator/map';
-//import { map } from 'rxjs/operators';
+import 'rxjs/add/operator/map'; 
+
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +36,8 @@ export class AuthService {
     this.authToken=token;
     this.user=user;
   }
+
+  
 
   logout(){
     this.authToken = null;
