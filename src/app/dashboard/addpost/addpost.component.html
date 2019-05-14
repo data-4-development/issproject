@@ -2,19 +2,21 @@
 
 <div class="card">
   <div class="card-body">
+      <div class="form-group" >
+          <label class="col-md-4">Post Title </label>
+          <input type="text" name="post_title" [(ngModel)]="post_title" placeholder="Post Title .... " />
+        </div>
     <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+       
+
       <div class="form-group">
-        <label class="col-md-4">Post Title </label>
-        <input type="text" class="form-control" />
-      </div>
-      <div class="form-group">
-        <label for="editor">Editors </label>
+        <label for="editor"> Summary </label>
         <quill-editor #disciplineQE id="discipline-qe" formControlName="editor"></quill-editor>
       </div>
 
 
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Add Post</button>
+        <button type="submit" class="btn btn-primary" >Add Post</button>
       </div>
     </form>
   </div>
@@ -23,8 +25,8 @@
   to read from quill as html page
 -->
 <div class="container">
-output:
-{{editorContent}}
-<p [innerHTML]="editorContent"></p>
+  output:
+  {{editorContent}}
+  <p [innerHTML]="editorContent"></p>
 
 </div>

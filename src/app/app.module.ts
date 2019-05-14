@@ -28,14 +28,13 @@ import { ElecmunicComponent } from './maps/elecmunic/elecmunic.component';
 import { LegislComponent } from './maps/legisl/legisl.component';
 import { from } from 'rxjs';
 import { AddpostComponent } from './dashboard/addpost/addpost.component';
-import { PostService } from './dashboard/post.service';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
 import { ValidateService } from './services/validate.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { QuillModule } from 'ngx-quill';
 import { AuthService } from './services/auth.service';
-
+import{PostService}from'./dashboard/post.service'
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
