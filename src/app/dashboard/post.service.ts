@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
+import {HttpClientModule} from '@angular/common/http' ;
+import 'rxjs/add/operator/map';
 
 @Injectable({
   providedIn: 'root'
@@ -8,25 +11,22 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class PostService {
- 
 
-   obj = {
+  constructor(private http: HttpClient) { }
+  obj = {
     title: String,
-     body: String
-   };
+    body: String
+  };
 
-  uri = 'http://localhost:3000/dashboard/addpost';
-  static uri: any;
-  static http: any;
 
-  constructor( http: HttpClient) { }
- 
-  static addPost(obj) {
-   
-    console.log(obj);
-    this.http.post(`${this.uri}/add`, obj)
-        .subscribe(res => console.log('Done'));
+post: any;
+  registerPost(post) {
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/posts/addpost', post, { headers: headers })
+      .map(res => res);
   }
+
 
 
 }

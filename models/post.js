@@ -1,20 +1,21 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
 const config = require('../config/database');
 
-//user schema
-const PostSchema = mongoose.Schema({
-    title: {
-        type: String,
-    },
-    body: {
-        type: String,
 
-    }
+const Schema = mongoose.Schema;
+//user schema
+const PostSchema = new Schema({
+    title: String,
+    body: String
+
+
 
 });
 
-const Post = module.exports = mongoose.model('Post', PostSchema);
+
+
+module.exports = mongoose.model('post', PostSchema, 'post');
+
 /*
 module.exports.getPostById = function (id, callback) {
     User.findById(id, callback);
@@ -26,8 +27,3 @@ module.exports.getUserByUsername = function (username, callback) {
 */
 
 
-
-module.exports.comparePassword = function (newPost, callback) {
-
-    newPost.save(callback);
-}

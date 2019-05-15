@@ -11,6 +11,8 @@ import { ElecComponent } from './maps/elec/elec.component';
 import { LegislComponent } from './maps/legisl/legisl.component';
 import { ElecmunicComponent } from './maps/elecmunic/elecmunic.component';
 import { AddpostComponent } from './dashboard/addpost/addpost.component';
+import { ElectionsComponent } from './maps/elections/elections.component';
+import { ElecbacComponent } from './maps/elecbac/elecbac.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'maps', component: MapsComponent },
   { path: 'maps/elec', component: ElecComponent },
   { path: 'maps/legisl', component: LegislComponent },
+  { path : 'maps/elections', component: ElectionsComponent},
+  { path : 'maps/elecbac', component: ElecbacComponent},
   { path: 'maps/elecmunic', component: ElecmunicComponent },
   { path: 'dashboard/addpost', component: AddpostComponent }
 
