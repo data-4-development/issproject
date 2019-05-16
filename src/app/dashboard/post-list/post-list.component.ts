@@ -16,7 +16,7 @@ export class PostListComponent implements OnInit {
 
   ngOnInit() {
   }
-onSelect( p:Post){
+onSelect(p : Post){
   this.SelectPost.emit(p);
 
 }

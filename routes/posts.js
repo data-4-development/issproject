@@ -10,14 +10,15 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect(config.database, function (err) {
     if (err) {
-        console.error("Error! " + err);
+        console.error("Error!ss  " + err);
     }
 })
+//dcfvgh
 //localhost:3000/posts/posts
 //find posts
 router.get('/posts', function (req, res) {
     console.log("get request for all posts");
-    Post.find({})
+    Post.find({}).sort({ _id : -1}) 
         .exec(function (err, posts) {
             if (err) {
                 console.log("error find posts");
@@ -44,11 +45,11 @@ router.get('/posts/:id', function (req, res) {
 router.post('/insert', function (req, res) {
     console.log('insert a post');
     let newPost = new Post({
-        
-        title : req.body.title, 
-        body : req.body.body
+
+        title: req.body.title,
+        body: req.body.body
     });
-    
+
     newPost.save(function (err, insertedPost) {
         if (err) {
             console.log('error saving video');
@@ -70,11 +71,11 @@ router.put('/posts/:id', function (req, res) {
         {
             new: true
         },
-        function(err, updatedPost){
-            if(err){
+        function (err, updatedPost) {
+            if (err) {
                 res.send("Error updating post");
 
-            }else{
+            } else {
                 res.json(updatedPost);
             }
 
@@ -82,15 +83,15 @@ router.put('/posts/:id', function (req, res) {
     )
 })
 
-router.delete('/posts/:id', function(req,res){
+router.delete('/posts/:id', function (req, res) {
     console.log("deleting post");
-    Post.findByIdAndRemove(req.params.id, function(err, deletedPost){
-        if(err){
+    Post.findByIdAndRemove(req.params.id, function (err, deletedPost) {
+        if (err) {
             res.send("error deleting post");
         }
-    else{
-        res.json(deletedPost);
-    }
+        else {
+            res.json(deletedPost);
+        }
     })
 
 });

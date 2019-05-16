@@ -14,6 +14,7 @@ import { AddpostComponent } from './dashboard/addpost/addpost.component';
 import { ElectionsComponent } from './maps/elections/elections.component';
 import { ElecbacComponent } from './maps/elecbac/elecbac.component';
 import { EditpostComponent } from './dashboard/editpost/editpost.component';
+import { PostPageComponent } from './post-page/post-page.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'maps', component: MapsComponent },
+  { path : 'posts', component: PostPageComponent},
   { path: 'maps/elec', component: ElecComponent },
   { path: 'maps/legisl', component: LegislComponent },
   { path : 'maps/elections', component: ElectionsComponent},

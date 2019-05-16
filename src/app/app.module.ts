@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatCardModule, MatGridListModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
+import { MatToolbarModule, MatExpansionModule, MatCardModule, MatGridListModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCheckboxModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -39,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditpostComponent } from './dashboard/editpost/editpost.component';
 import { PostListComponent } from './dashboard/post-list/post-list.component';
 import { PostDetailComponent } from './dashboard/post-detail/post-detail.component';
+import { PostPageComponent } from './post-page/post-page.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { PostDetailComponent } from './dashboard/post-detail/post-detail.compone
     AboutComponent,
     EditpostComponent,
     PostListComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    PostPageComponent
 
   ],
   imports: [
@@ -81,6 +83,7 @@ import { PostDetailComponent } from './dashboard/post-detail/post-detail.compone
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
+    MatExpansionModule,
     MatSelectModule,
     MatButtonModule,
     MatSidenavModule,

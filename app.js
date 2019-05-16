@@ -36,12 +36,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //body parser middleware
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.urlencoded({limit: '50mb'}));
 require('./config/passport')(passport);
 //jklm
 
