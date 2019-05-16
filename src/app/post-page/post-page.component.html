@@ -8,15 +8,16 @@
 
 </mat-list>
 -->
+
 <mat-accordion>
 
   <mat-expansion-panel *ngFor="let post of posts">
     <mat-expansion-panel-header>
       <mat-panel-title>
-       <h5> {{post.title}}</h5>
+       <h3> {{post.title}}</h3>
       </mat-panel-title>
       <mat-panel-description>
-      <hr>  click to continue reading ..
+      <hr> 
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p [innerHTML]="post.body"></p>

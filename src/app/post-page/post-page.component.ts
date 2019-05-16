@@ -16,6 +16,7 @@ export class PostPageComponent implements OnInit {
   ngOnInit() {
     this._postService.getPosts()
     .subscribe(resPostData => this.posts = resPostData);
+    console.log(Date());
   }
 
 }
