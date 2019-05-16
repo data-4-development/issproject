@@ -36,6 +36,9 @@ import { QuillModule } from 'ngx-quill';
 import { AuthService } from './services/auth.service';
 import{PostService}from'./dashboard/post.service'
 import { HttpClientModule } from '@angular/common/http';
+import { EditpostComponent } from './dashboard/editpost/editpost.component';
+import { PostListComponent } from './dashboard/post-list/post-list.component';
+import { PostDetailComponent } from './dashboard/post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +64,9 @@ import { HttpClientModule } from '@angular/common/http';
     AddpostComponent,
     SidebarComponent,
     AboutComponent,
+    EditpostComponent,
+    PostListComponent,
+    PostDetailComponent
 
   ],
   imports: [

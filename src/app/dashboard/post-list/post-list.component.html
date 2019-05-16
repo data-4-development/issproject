@@ -1,0 +1,11 @@
+<!--
+  <ul >
+<li *ngFor="let post of posts">
+  <a> {{post.title}}</a>
+</li>
+
+</ul>
+-->
+<mat-list role="list">
+  <mat-list-item role="listitem" (click)="onSelect(post)" *ngFor="let post of posts"> {{post.title}}</mat-list-item>
+</mat-list>

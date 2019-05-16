@@ -1,0 +1,10 @@
+<app-sidebar></app-sidebar>
+<div class="row">
+  <div class="col-sm-9">
+    <post-detail *ngIf="selectedPost" [post]="selectedPost"></post-detail>
+
+  </div>
+  <div class="col-sm-3">
+    <post-list (SelectPost)="onSelectPost($event)" [posts]="posts"></post-list>
+  </div>
+</div>

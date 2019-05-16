@@ -5,10 +5,9 @@ const config = require('../config/database');
 const Schema = mongoose.Schema;
 //user schema
 const PostSchema = new Schema({
+
     title: String,
     body: String
-
-
 
 });
 

@@ -6,7 +6,7 @@ const config = require('../config/database');
 const User = require('../models/user');
 
 //register
-router.post('/register',  (req, res, next) => {  // /users/register automatically in users
+router.post('/register',  (req, res) => {  // /users/register automatically in users
   let newUser= new User({
     username: req.body.username, //get the data submitted
     email: req.body.email,

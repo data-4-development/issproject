@@ -43,9 +43,12 @@ router.get('/posts/:id', function (req, res) {
 
 router.post('/insert', function (req, res) {
     console.log('insert a post');
-    let newPost = new Post();
-    newPost.title = req.body.title, 
-        newPost.body = req.body.body
+    let newPost = new Post({
+        
+        title : req.body.title, 
+        body : req.body.body
+    });
+    
     newPost.save(function (err, insertedPost) {
         if (err) {
             console.log('error saving video');

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { PostService } from '../post.service';
-import { from } from 'rxjs';
-import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { FlashMessagesService } from 'angular2-flash-messages';
+
+import Post from 'src/app/models/post';
 @Component({
   selector: 'app-addpost',
   templateUrl: './addpost.component.html',
@@ -17,7 +18,8 @@ export class AddpostComponent implements OnInit {
 
 
   constructor(
-    private addPost: PostService,
+    private flashMessage: FlashMessagesService,
+    private _postService: PostService,
     private router: Router
   ) { }
 
@@ -30,26 +32,21 @@ export class AddpostComponent implements OnInit {
   }
 
 
+
   onSubmit() {
     this.editorContent = this.editorForm.get('editor').value;
-
     const post = {
-
       title: this.post_title,
       body: this.editorContent
-
     }
-console.log(post);
-    this.addPost.registerPost(post).subscribe((data: any) => {
-      if(data.success){
-        console.log("post added successfully ");
-        this.router.navigate(['/dashboard']);
-      }else {
-        console.log("post failed ");
-        this.router.navigate(['/dashboard']);
-      }
 
+    this._postService.addPost(post).subscribe((data: any) => {
+        this.flashMessage.show("Post Added Successfully !", { cssClass: 'alert-success', timeout: 3000 });
+        this.router.navigate(['/']);
+      
     });
+    console.log(post);
+
 
   }
 

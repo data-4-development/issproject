@@ -13,6 +13,7 @@ import { ElecmunicComponent } from './maps/elecmunic/elecmunic.component';
 import { AddpostComponent } from './dashboard/addpost/addpost.component';
 import { ElectionsComponent } from './maps/elections/elections.component';
 import { ElecbacComponent } from './maps/elecbac/elecbac.component';
+import { EditpostComponent } from './dashboard/editpost/editpost.component';
 
 
 const routes: Routes = [
@@ -27,8 +28,8 @@ const routes: Routes = [
   { path : 'maps/elections', component: ElectionsComponent},
   { path : 'maps/elecbac', component: ElecbacComponent},
   { path: 'maps/elecmunic', component: ElecmunicComponent },
-  { path: 'dashboard/addpost', component: AddpostComponent }
-
+  { path: 'dashboard/addpost', component: AddpostComponent },
+  { path: 'dashboard/editpost', component: EditpostComponent }
 
 ];
 

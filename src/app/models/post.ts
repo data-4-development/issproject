@@ -1,4 +1,4 @@
 export default class Post {
-    title: String;
-    body: String;
-  }
+  title: String;
+  body: String;
+}
