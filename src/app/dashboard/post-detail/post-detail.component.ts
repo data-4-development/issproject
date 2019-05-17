@@ -10,7 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class PostDetailComponent implements OnInit {
   editorForm: FormGroup;
 x :String;
-
+post: any;
   constructor() { }
 
   ngOnInit() {

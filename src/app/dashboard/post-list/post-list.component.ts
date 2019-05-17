@@ -9,7 +9,7 @@ import Post from 'src/app/models/post';
   outputs : ['SelectPost']
 })
 export class PostListComponent implements OnInit {
-
+  posts: any;
 
   public SelectPost = new EventEmitter();
   constructor() { }

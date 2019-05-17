@@ -32,9 +32,12 @@ mongoose.connect(config.database);
 app.use(cors()); //cors middleware
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/dist/issproject')));
 
-
+app.get('/*', function(req,res) {
+    
+  res.sendFile(path.join(__dirname+'/dist/issproject/index.html'));
+  });
 //body parser middleware
 app.use(bodyParser.json({limit: '50mb'}));
 
