@@ -40,6 +40,7 @@ import { EditpostComponent } from './dashboard/editpost/editpost.component';
 import { PostListComponent } from './dashboard/post-list/post-list.component';
 import { PostDetailComponent } from './dashboard/post-detail/post-detail.component';
 import { PostPageComponent } from './post-page/post-page.component';
+import { SocialComponent } from './home/social/social.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { PostPageComponent } from './post-page/post-page.component';
     EditpostComponent,
     PostListComponent,
     PostDetailComponent,
-    PostPageComponent
+    PostPageComponent,
+    SocialComponent
 
   ],
   imports: [
