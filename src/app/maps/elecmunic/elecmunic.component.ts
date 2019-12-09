@@ -12,8 +12,9 @@ export class ElecmunicComponent implements OnInit {
   // javascript: URLs are dangerous if attacker controlled.
   // Angular sanitizes them in data binding, but you can
   // explicitly tell Angular to trust this value:
-  this.dangerousUrl = scriptElement;
+  this.dangerousUrl = 'http:&#47;&#47;taleau.targa-consult.com';
   this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
+    
   }
 
   
