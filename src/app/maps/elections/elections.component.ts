@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DomSanitizer, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-elections',
@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElectionsComponent implements OnInit {
 
-  constructor() { }
+
+  constructor( private sanitizer: DomSanitizer) {
+  // javascript: URLs are dangerous if attacker controlled.
+  // Angular sanitizes them in data binding, but you can
+  // explicitly tell Angular to trust this value:
+  this.dangerousUrl = 'http:&#47;&#47;taleau.targa-consult.com';
+  this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
+  }
 
   ngOnInit() {
 
